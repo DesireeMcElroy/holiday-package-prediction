@@ -5,7 +5,6 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 from scipy import stats
-from sklearn.metrics import mean_squared_error, r2_score, explained_variance_score
 
 from sklearn.linear_model import LinearRegression, LassoLars, TweedieRegressor
 from sklearn.feature_selection import f_regression, SelectKBest, RFE
