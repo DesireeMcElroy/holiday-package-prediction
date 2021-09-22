@@ -1,1 +1,10 @@
-Initial readme for Holiday Package Prediction project.
+## Holiday Package Prediction Project.
+
+
+### Goals:
+
+
+### Findings:
+
+
+### Data Dictionary:
