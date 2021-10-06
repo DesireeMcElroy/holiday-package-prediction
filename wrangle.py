@@ -37,6 +37,39 @@ def get_info(df):
     return df.sample(3)
 
 
+def prepare_holiday(df):
+    '''
+    This function takes in a the holiday data set and cleans it by lowercasing and renaming columns,
+
+    '''
+    # first and foremost let's rename our columns to more human readable
+    df.rename(str.lower, axis='columns', inplace=True)
+    df.rename(columns={'customerid': 'cust_id',
+                    'prodtaken': 'product_taken',
+                    'typeofcontact': 'contact_type',
+                    'citytier': 'city_tier',
+                    'durationofpitch': 'pitch_duration',
+                    'numberofpersonvisiting': 'group_size',
+                    'numberoffollowups': 'no_followups',
+                    'productpitched': 'product_pitched',
+                    'preferredpropertystar': 'preferred_property_star',
+                    'maritalstatus': 'marital_status',
+                    'numberoftrips': 'no_trips',
+                    'pitchsatisfactionscore': 'pitch_sat_score',
+                    'owncar': 'has_car',
+                    'numberofchildrenvisiting': 'no_children',
+                    'monthlyincome': 'monthly_income'
+    }, inplace=True)
+
+    return df
+
+
+
+
+
+
+
+
 def value_counts(df, column):
     '''
     This function takes in a dataframe and list of columns and prints value counts for each column.
