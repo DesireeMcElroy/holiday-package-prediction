@@ -44,8 +44,7 @@ def prepare_holiday(df):
     '''
     # first and foremost let's rename our columns to more human readable
     df.rename(str.lower, axis='columns', inplace=True)
-    df.rename(columns={'customerid': 'cust_id',
-                    'prodtaken': 'product_taken',
+    df.rename(columns={'prodtaken': 'product_taken',
                     'typeofcontact': 'contact_type',
                     'citytier': 'city_tier',
                     'durationofpitch': 'pitch_duration',
@@ -60,6 +59,8 @@ def prepare_holiday(df):
                     'numberofchildrenvisiting': 'no_children',
                     'monthlyincome': 'monthly_income'
     }, inplace=True)
+    
+    df.drop(columns='customerid', inplace=True)
 
     return df
 
