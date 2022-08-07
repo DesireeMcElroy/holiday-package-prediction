@@ -2,6 +2,7 @@
 
 
 ### Goals:
+- Extract pertinent data relative to target
 
 ### Hypothesis:
 
