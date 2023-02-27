@@ -61,6 +61,9 @@ def prepare_holiday(df):
     }, inplace=True)
     
     df.drop(columns='customerid', inplace=True)
+    
+    # change the entries of contact_type from Self Enquiry to Self Inquiry
+    df.contact_type = np.where(df.contact_type=='Self Enquiry', 'Self Inquiry', df.contact_type)
 
     return df
 
